@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+.env
+
+# Node/NextJS
+frontend/node_modules/
+frontend/.next/
+frontend/.DS_Store
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.pnp.*
+frontend/.pnpm-store
+frontend/out/
