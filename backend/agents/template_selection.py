@@ -9,11 +9,11 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # ── 5 Buckets with templates inside ──────────────────────
 
 BUCKETS = {
-    "CORPORATE":  ["bold_header", "top_banner", "classic_clean"],
-    "CREATIVE":   ["split", "right_accent", "centered"],
-    "TECH":       ["dark_modern", "minimal_left"],
-    "VIBRANT":    ["gradient_flow", "vibrant_block"],
-    "PERSONAL":   ["centered", "minimal_left", "top_banner"]
+    "CORPORATE": ["bold_header", "top_banner", "classic_clean", "bottom_bar", "executive_gold"],
+    "CREATIVE":  ["split", "right_accent", "centered", "corner_box", "magazine_editorial"],
+    "TECH":      ["dark_modern", "minimal_left", "neon_tech", "two_column"],
+    "VIBRANT":   ["gradient_flow", "vibrant_block", "logo_hero"],
+    "PERSONAL":  ["centered", "top_banner", "name_large", "pastel_soft", "minimal_right"]
 }
 
 # ── LLM Prompt — only 5 choices ──────────────────────────

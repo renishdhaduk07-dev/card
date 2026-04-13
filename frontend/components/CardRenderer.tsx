@@ -148,9 +148,49 @@ function CardComponentView({ component }: { component: CardComponent }) {
     textStyle.backgroundColor = s.backgroundColor;
   }
 
+  const innerStyle: React.CSSProperties = {
+    width: "100%",
+    textAlign: textStyle.textAlign,
+    display: "block",
+    textDecoration: "inherit",
+    color: "inherit",
+  };
+
+  if (componentType === "website" && fallbackText) {
+    const url = fallbackText.startsWith("http") ? fallbackText : `https://${fallbackText}`;
+    return (
+      <div style={textStyle}>
+        <a href={url} target="_blank" rel="noopener noreferrer" style={innerStyle}>
+          {fallbackText}
+        </a>
+      </div>
+    );
+  }
+
+  if (componentType === "email" && fallbackText) {
+    return (
+      <div style={textStyle}>
+        <a href={`mailto:${fallbackText}`} style={innerStyle}>
+          {fallbackText}
+        </a>
+      </div>
+    );
+  }
+
+  if (componentType === "phoneNumber" && fallbackText) {
+    const tel = fallbackText.replace(/[^0-9+]/g, "");
+    return (
+      <div style={textStyle}>
+        <a href={`tel:${tel}`} style={innerStyle}>
+          {fallbackText}
+        </a>
+      </div>
+    );
+  }
+
   return (
     <div style={textStyle}>
-      <span style={{ width: "100%", textAlign: textStyle.textAlign }}>
+      <span style={innerStyle}>
         {fallbackText}
       </span>
     </div>

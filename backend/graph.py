@@ -149,6 +149,13 @@ def run_regen_agent(previous_state: dict, rejected_templates: list) -> dict:
     previous_state["validation_passed"] = False
     previous_state["validation_errors"] = []
     
+    # ── CRITICAL: Wipe old generation data so it doesn't leak! ──
+    previous_state["template_json"] = None
+    previous_state["populated_json"] = None
+    previous_state["final_card_json"] = None
+    previous_state["selected_template_id"] = None   # force a fresh pick
+    # ────────────────────────────────────────────────────────────
+    
     result = compiled_regen_graph.invoke(previous_state)
     return result
 

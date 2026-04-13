@@ -30,23 +30,23 @@ STRICT RULES — NEVER VIOLATE THESE:
 ═══════════════════════════════════════════════
 COLOR RULES:
 ═══════════════════════════════════════════════
-- cardBackground     → use primary_color as backgroundValue
-- If background is DARK  → text color must be #FFFFFF or light
-- If background is LIGHT → text color must be #1A1A1A or dark
-- fullName           → use bold, slightly larger font
-- position           → use accent/lighter version of primary color
-- contact fields     → use muted color (#555555 or similar)
-- website            → use primary_color with underline
-- All colors MUST be valid hex (#RRGGBB)
+- cardBackground     → use primary_color (if the component is a solid background block)
+- strictly follow this : do not give the same background colour to any other component like email,phonenumber,website,fullname,position,or any other component .
+- fullName           → use #FFFFFF if dark background, #1A1A1A if light background.
+- position           → strictly use secondary_color or a vibrant accent derived from primary_color.
+- email, phoneNumber, website → USE THE EXACT SAME COLOR as the `position` field.
+   This creates visual harmony. Do NOT use grey, yellow, or lime on a light background.
+   Pick a color that is sharp and readable — the same brand accent used for position.
 
 ═══════════════════════════════════════════════
 TEXT RULES:
 ═══════════════════════════════════════════════
 - fullName           → fontWeight bold, fontSize 22-28
 - position           → textTransform uppercase, letterSpacing 1-2
-- organization_name  → fontWeight normal, fontSize 13-15
+- organization_name  → Extract ONLY the core, short business name! Drop SEO taglines (e.g. use "PayPal" instead of "A Simple and Safer Way... | PayPal IN").
+- website            → CRITICAL: Set visible to true and use EXACTLY `{website_url}` as fallbackText. Do NOT hide it.
 - contact fields     → fontSize 11-13, fontWeight normal
-- If user did NOT provide a field → set visible: false
+- For other fields (fbLink, liLink, igLink) → if not in user_data, set visible: false
 
 ═══════════════════════════════════════════════
 VALUE SOURCE RULES:
@@ -54,6 +54,7 @@ VALUE SOURCE RULES:
 - Colors/logo from brand data  → type: "ai_extracted", extractedFrom: "og_image" or "screenshot"
 - User typed fields            → type: "user_input",   extractedFrom: "text_input"
 - Company name from website    → type: "ai_extracted", extractedFrom: "screenshot"
+- website field                → map the exact `website_url` value into the `fallbackText` field!
 
 ═══════════════════════════════════════════════
 OUTPUT:
@@ -75,6 +76,7 @@ BRAND DATA:
 - secondary_color: {secondary_color}
 - logo_url       : {logo_url}
 - og_image_url   : {og_image_url}
+- website_url    : {website_url}
 
 ═══════════════════════════════════════════════
 USER DATA:
@@ -114,6 +116,15 @@ def fill_agent(state: CardState) -> CardState:
     retry_count = state.get("retry_count", 0)
     errors      = state.get("validation_errors", [])
 
+    # ── Always compute these so post-processing can use them ──
+    raw_company_name = state.get("company_name", "") or ""
+    parts = raw_company_name.replace("|", "-").split("-")
+    parts = [p.strip() for p in parts if p.strip()]
+    clean_company_name = min(parts, key=len) if len(parts) > 1 else raw_company_name
+
+    url_input = state.get("url", "") or ""
+    clean_url = url_input.replace("https://", "").replace("http://", "").strip("/")
+
     # --- Self correction mode ---
     if retry_count > 0 and errors:
         print(f"[Fill] 🔁 Self-correcting (attempt {retry_count})...")
@@ -126,11 +137,12 @@ def fill_agent(state: CardState) -> CardState:
         print("[Fill] ✍️  Filling template with brand + user data...")
         prompt = FILL_PROMPT.format(
             template_json=json.dumps(state["template_json"], indent=2),
-            company_name=state.get("company_name", ""),
+            company_name=clean_company_name,
             primary_color=state.get("primary_color", "#333333"),
             secondary_color=state.get("secondary_color", "#FFFFFF"),
             logo_url=state.get("logo_url", ""),
             og_image_url=state.get("og_image_url", ""),
+            website_url=clean_url,
             user_data=json.dumps(state.get("user_data", {}), indent=2)
         )
 
@@ -144,6 +156,16 @@ def fill_agent(state: CardState) -> CardState:
 
         raw = response.choices[0].message.content
         populated_json = json.loads(raw)
+
+        # ── Post-Process Safety Net ──────────────
+        for comp in populated_json.get("components", []):
+            ct = comp.get("componentType")
+            if ct == "website" and clean_url:
+                comp["visible"] = True
+                comp["fallbackText"] = clean_url
+            elif ct == "organization_name" and clean_company_name:
+                comp["fallbackText"] = clean_company_name
+        # ─────────────────────────────────────────
 
         print("[Fill] ✅ Template filled successfully")
 

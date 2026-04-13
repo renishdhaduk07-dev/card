@@ -26,7 +26,7 @@ def template_fetch_agent(state: CardState) -> CardState:
         return {**state, "template_json": template_json}
 
     # --- Fallback: load from combined templates file ---
-    combined_file = TEMPLATES_DIR / "rolo_card_templates.json"
+    combined_file = TEMPLATES_DIR / "rolo_card_templates_20.json"
     if combined_file.exists():
         with open(combined_file, "r") as f:
             all_templates = json.load(f)

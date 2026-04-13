@@ -4,12 +4,7 @@
       "templateId": "minimal_left",
       "name": "Minimal Left",
       "description": "Clean layout with logo on left, content on right. Best for simple, minimal brands.",
-      "bestFor": [
-        "minimal",
-        "clean",
-        "simple",
-        "lifestyle"
-      ],
+      "bestFor": ["minimal", "clean", "simple", "lifestyle"],
       "components": [
         {
           "id": "ml-001",
@@ -18,28 +13,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -49,29 +30,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 80,
-            "height": 80
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 80,
-            "height": 80
-          },
+          "hCoords": { "top": 40, "left": 40, "width": 80, "height": 80 },
+          "vCoords": { "top": 40, "left": 40, "width": 80, "height": 80 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 8,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -81,18 +48,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 50,
-            "left": 160,
-            "width": 300,
-            "height": 40
-          },
-          "vCoords": {
-            "top": 160,
-            "left": 40,
-            "width": 316,
-            "height": 40
-          },
+          "hCoords": { "top": 50, "left": 160, "width": 300, "height": 40 },
+          "vCoords": { "top": 160, "left": 40, "width": 316, "height": 40 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -105,11 +62,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -119,18 +72,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 100,
-            "left": 160,
-            "width": 300,
-            "height": 28
-          },
-          "vCoords": {
-            "top": 210,
-            "left": 40,
-            "width": 316,
-            "height": 28
-          },
+          "hCoords": { "top": 100, "left": 160, "width": 300, "height": 28 },
+          "vCoords": { "top": 210, "left": 40, "width": 316, "height": 28 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -143,11 +86,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -157,18 +96,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 135,
-            "left": 160,
-            "width": 300,
-            "height": 28
-          },
-          "vCoords": {
-            "top": 248,
-            "left": 40,
-            "width": 316,
-            "height": 28
-          },
+          "hCoords": { "top": 135, "left": 160, "width": 300, "height": 28 },
+          "vCoords": { "top": 248, "left": 40, "width": 316, "height": 28 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -181,11 +110,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -195,18 +120,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 280,
-            "left": 40,
-            "width": 280,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 560,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 280, "left": 40, "width": 280, "height": 24 },
+          "vCoords": { "top": 560, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -219,11 +134,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -233,18 +144,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 312,
-            "left": 40,
-            "width": 280,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 592,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 312, "left": 40, "width": 280, "height": 24 },
+          "vCoords": { "top": 592, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -257,11 +158,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -271,18 +168,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 344,
-            "left": 40,
-            "width": 280,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 624,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 344, "left": 40, "width": 280, "height": 24 },
+          "vCoords": { "top": 624, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -295,25 +182,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "bold_header",
       "name": "Bold Header",
       "description": "Strong color band at top with name and title. Details at bottom. Best for corporate brands.",
-      "bestFor": [
-        "corporate",
-        "enterprise",
-        "professional",
-        "strong colors"
-      ],
+      "bestFor": ["corporate", "enterprise", "professional", "strong colors"],
       "components": [
         {
           "id": "bh-001",
@@ -322,28 +201,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -353,28 +218,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 1,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 160
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 280
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 160 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 280 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#1A73E8",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -384,29 +235,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 3,
-          "hCoords": {
-            "top": 30,
-            "left": 600,
-            "width": 70,
-            "height": 70
-          },
-          "vCoords": {
-            "top": 30,
-            "left": 296,
-            "width": 70,
-            "height": 70
-          },
+          "hCoords": { "top": 30, "left": 600, "width": 70, "height": 70 },
+          "vCoords": { "top": 30, "left": 296, "width": 70, "height": 70 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 6,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -416,18 +253,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 3,
-          "hCoords": {
-            "top": 35,
-            "left": 40,
-            "width": 520,
-            "height": 44
-          },
-          "vCoords": {
-            "top": 120,
-            "left": 40,
-            "width": 316,
-            "height": 44
-          },
+          "hCoords": { "top": 35, "left": 40, "width": 520, "height": 44 },
+          "vCoords": { "top": 120, "left": 40, "width": 316, "height": 44 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -440,11 +267,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -454,18 +277,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 3,
-          "hCoords": {
-            "top": 90,
-            "left": 40,
-            "width": 400,
-            "height": 28
-          },
-          "vCoords": {
-            "top": 174,
-            "left": 40,
-            "width": 316,
-            "height": 28
-          },
+          "hCoords": { "top": 90, "left": 40, "width": 400, "height": 28 },
+          "vCoords": { "top": 174, "left": 40, "width": 316, "height": 28 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -478,11 +291,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -492,18 +301,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 185,
-            "left": 40,
-            "width": 300,
-            "height": 28
-          },
-          "vCoords": {
-            "top": 300,
-            "left": 40,
-            "width": 316,
-            "height": 28
-          },
+          "hCoords": { "top": 185, "left": 40, "width": 300, "height": 28 },
+          "vCoords": { "top": 300, "left": 40, "width": 316, "height": 28 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -516,11 +315,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -530,18 +325,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 235,
-            "left": 40,
-            "width": 300,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 360,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 235, "left": 40, "width": 300, "height": 24 },
+          "vCoords": { "top": 360, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -554,11 +339,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -568,18 +349,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 265,
-            "left": 40,
-            "width": 300,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 392,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 265, "left": 40, "width": 300, "height": 24 },
+          "vCoords": { "top": 392, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -592,11 +363,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -606,18 +373,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 295,
-            "left": 40,
-            "width": 300,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 424,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 295, "left": 40, "width": 300, "height": 24 },
+          "vCoords": { "top": 424, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -630,25 +387,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "split",
       "name": "Split",
       "description": "Left color block with logo, right white panel with all content. Best for strong color brands.",
-      "bestFor": [
-        "strong colors",
-        "bold",
-        "creative",
-        "agencies"
-      ],
+      "bestFor": ["strong colors", "bold", "creative", "agencies"],
       "components": [
         {
           "id": "sp-001",
@@ -657,28 +406,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -688,28 +423,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 1,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 240,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 320
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 240, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 320 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#E63946",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -719,29 +440,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 3,
-          "hCoords": {
-            "top": 148,
-            "left": 80,
-            "width": 80,
-            "height": 80
-          },
-          "vCoords": {
-            "top": 120,
-            "left": 158,
-            "width": 80,
-            "height": 80
-          },
+          "hCoords": { "top": 148, "left": 80, "width": 80, "height": 80 },
+          "vCoords": { "top": 120, "left": 158, "width": 80, "height": 80 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 50,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -751,18 +458,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 60,
-            "left": 270,
-            "width": 400,
-            "height": 40
-          },
-          "vCoords": {
-            "top": 340,
-            "left": 40,
-            "width": 316,
-            "height": 40
-          },
+          "hCoords": { "top": 60, "left": 270, "width": 400, "height": 40 },
+          "vCoords": { "top": 340, "left": 40, "width": 316, "height": 40 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -775,11 +472,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -789,18 +482,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 110,
-            "left": 270,
-            "width": 380,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 390,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 110, "left": 270, "width": 380, "height": 26 },
+          "vCoords": { "top": 390, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -813,11 +496,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -827,18 +506,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 144,
-            "left": 270,
-            "width": 380,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 424,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 144, "left": 270, "width": 380, "height": 26 },
+          "vCoords": { "top": 424, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -851,11 +520,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -865,18 +530,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 240,
-            "left": 270,
-            "width": 380,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 520,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 240, "left": 270, "width": 380, "height": 24 },
+          "vCoords": { "top": 520, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -889,11 +544,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -903,18 +554,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 272,
-            "left": 270,
-            "width": 380,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 552,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 272, "left": 270, "width": 380, "height": 24 },
+          "vCoords": { "top": 552, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -927,11 +568,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -941,18 +578,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 304,
-            "left": 270,
-            "width": 380,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 584,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 304, "left": 270, "width": 380, "height": 24 },
+          "vCoords": { "top": 584, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -965,26 +592,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "dark_modern",
       "name": "Dark Modern",
       "description": "Dark background with light text and accent color highlights. Best for tech and startup brands.",
-      "bestFor": [
-        "tech",
-        "startup",
-        "dark theme",
-        "modern",
-        "SaaS"
-      ],
+      "bestFor": ["tech", "startup", "dark theme", "modern", "SaaS"],
       "components": [
         {
           "id": "dm-001",
@@ -993,28 +611,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#0F0F0F",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -1024,29 +628,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 64,
-            "height": 64
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 64,
-            "height": 64
-          },
+          "hCoords": { "top": 40, "left": 40, "width": 64, "height": 64 },
+          "vCoords": { "top": 40, "left": 40, "width": 64, "height": 64 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 12,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -1056,18 +646,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 160,
-            "left": 40,
-            "width": 400,
-            "height": 44
-          },
-          "vCoords": {
-            "top": 280,
-            "left": 40,
-            "width": 316,
-            "height": 44
-          },
+          "hCoords": { "top": 160, "left": 40, "width": 400, "height": 44 },
+          "vCoords": { "top": 280, "left": 40, "width": 316, "height": 44 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -1080,11 +660,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -1094,18 +670,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 214,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 334,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 214, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 334, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1118,11 +684,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -1132,18 +694,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 248,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 368,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 248, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 368, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1156,11 +708,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -1170,18 +718,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 310,
-            "left": 40,
-            "width": 300,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 560,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 310, "left": 40, "width": 300, "height": 22 },
+          "vCoords": { "top": 560, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1194,11 +732,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -1208,18 +742,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 340,
-            "left": 40,
-            "width": 300,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 590,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 340, "left": 40, "width": 300, "height": 22 },
+          "vCoords": { "top": 590, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1232,11 +756,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -1246,18 +766,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 370,
-            "left": 40,
-            "width": 300,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 620,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 370, "left": 40, "width": 300, "height": 22 },
+          "vCoords": { "top": 620, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1270,26 +780,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "centered",
       "name": "Centered",
       "description": "All elements centered with logo on top. Great for lifestyle, creative, and personal brands.",
-      "bestFor": [
-        "lifestyle",
-        "creative",
-        "personal brand",
-        "freelancer",
-        "artist"
-      ],
+      "bestFor": ["lifestyle", "creative", "personal brand", "freelancer", "artist"],
       "components": [
         {
           "id": "ce-001",
@@ -1298,28 +799,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FAF9F6",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -1329,29 +816,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 312,
-            "width": 80,
-            "height": 80
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 158,
-            "width": 80,
-            "height": 80
-          },
+          "hCoords": { "top": 40, "left": 312, "width": 80, "height": 80 },
+          "vCoords": { "top": 40, "left": 158, "width": 80, "height": 80 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 50,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -1361,18 +834,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 148,
-            "left": 152,
-            "width": 400,
-            "height": 40
-          },
-          "vCoords": {
-            "top": 200,
-            "left": 48,
-            "width": 300,
-            "height": 40
-          },
+          "hCoords": { "top": 148, "left": 152, "width": 400, "height": 40 },
+          "vCoords": { "top": 200, "left": 48, "width": 300, "height": 40 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -1385,11 +848,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -1399,18 +858,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 198,
-            "left": 152,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 250,
-            "left": 48,
-            "width": 300,
-            "height": 26
-          },
+          "hCoords": { "top": 198, "left": 152, "width": 400, "height": 26 },
+          "vCoords": { "top": 250, "left": 48, "width": 300, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1423,11 +872,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -1437,18 +882,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 232,
-            "left": 152,
-            "width": 400,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 284,
-            "left": 48,
-            "width": 300,
-            "height": 24
-          },
+          "hCoords": { "top": 232, "left": 152, "width": 400, "height": 24 },
+          "vCoords": { "top": 284, "left": 48, "width": 300, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1461,11 +896,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -1475,18 +906,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 310,
-            "left": 152,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 560,
-            "left": 48,
-            "width": 300,
-            "height": 22
-          },
+          "hCoords": { "top": 310, "left": 152, "width": 400, "height": 22 },
+          "vCoords": { "top": 560, "left": 48, "width": 300, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1499,50 +920,8 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
-        },
-        {
-          "id": "ce-phone",
-          "type": "role_content",
-          "cardSide": "front",
-          "componentType": "phoneNumber",
-          "visible": true,
-          "zIndex": 2,
-          "hCoords": {
-            "top": 340,
-            "left": 152,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 590,
-            "left": 48,
-            "width": 300,
-            "height": 22
-          },
-          "componentStyle": {
-            "fontFamily": "Roboto",
-            "fontWeight": "normal",
-            "fontStyle": "normal",
-            "fontSize": 11,
-            "color": "#555555",
-            "textAlign": "center",
-            "letterSpacing": 0,
-            "textTransform": "none",
-            "textDecoration": "none",
-            "opacity": 1
-          },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
-          "fallbackText": "+1 000 000 0000"
         },
         {
           "id": "ce-007",
@@ -1551,18 +930,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 370,
-            "left": 152,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 620,
-            "left": 48,
-            "width": 300,
-            "height": 22
-          },
+          "hCoords": { "top": 340, "left": 152, "width": 400, "height": 22 },
+          "vCoords": { "top": 590, "left": 48, "width": 300, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1575,26 +944,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "gradient_flow",
       "name": "Gradient Flow",
       "description": "Full gradient background flowing from primary to secondary brand color. Best for vibrant, energetic brands.",
-      "bestFor": [
-        "vibrant",
-        "energetic",
-        "fintech",
-        "health",
-        "wellness"
-      ],
+      "bestFor": ["vibrant", "energetic", "fintech", "health", "wellness"],
       "components": [
         {
           "id": "gf-001",
@@ -1603,28 +963,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "gradient",
             "backgroundValue": "linear-gradient(135deg, #667EEA 0%, #764BA2 100%)",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -1634,18 +980,8 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 70,
-            "height": 70
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 70,
-            "height": 70
-          },
+          "hCoords": { "top": 40, "left": 40, "width": 70, "height": 70 },
+          "vCoords": { "top": 40, "left": 40, "width": 70, "height": 70 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
@@ -1653,11 +989,7 @@
             "backgroundColor": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -1667,18 +999,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 150,
-            "left": 40,
-            "width": 440,
-            "height": 44
-          },
-          "vCoords": {
-            "top": 280,
-            "left": 40,
-            "width": 316,
-            "height": 44
-          },
+          "hCoords": { "top": 150, "left": 40, "width": 440, "height": 44 },
+          "vCoords": { "top": 280, "left": 40, "width": 316, "height": 44 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -1691,11 +1013,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -1705,18 +1023,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 204,
-            "left": 40,
-            "width": 440,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 334,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 204, "left": 40, "width": 440, "height": 26 },
+          "vCoords": { "top": 334, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1729,11 +1037,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -1743,18 +1047,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 238,
-            "left": 40,
-            "width": 440,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 368,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 238, "left": 40, "width": 440, "height": 26 },
+          "vCoords": { "top": 368, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1767,11 +1061,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -1781,18 +1071,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 310,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 560,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 310, "left": 40, "width": 400, "height": 22 },
+          "vCoords": { "top": 560, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1805,50 +1085,8 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
-        },
-        {
-          "id": "gf-phone",
-          "type": "role_content",
-          "cardSide": "front",
-          "componentType": "phoneNumber",
-          "visible": true,
-          "zIndex": 2,
-          "hCoords": {
-            "top": 340,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 590,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
-          "componentStyle": {
-            "fontFamily": "Roboto",
-            "fontWeight": "normal",
-            "fontStyle": "normal",
-            "fontSize": 11,
-            "color": "#E0D7FF",
-            "textAlign": "left",
-            "letterSpacing": 0,
-            "textTransform": "none",
-            "textDecoration": "none",
-            "opacity": 1
-          },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
-          "fallbackText": "+1 000 000 0000"
         },
         {
           "id": "gf-007",
@@ -1857,18 +1095,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 370,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 620,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 340, "left": 40, "width": 400, "height": 22 },
+          "vCoords": { "top": 590, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -1881,26 +1109,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "top_banner",
       "name": "Top Banner",
       "description": "Thin accent color bar at very top, content below with clean spacing. Best for consultants and lawyers.",
-      "bestFor": [
-        "consultant",
-        "lawyer",
-        "finance",
-        "accountant",
-        "professional services"
-      ],
+      "bestFor": ["consultant", "lawyer", "finance", "accountant", "professional services"],
       "components": [
         {
           "id": "tb-001",
@@ -1909,28 +1128,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -1940,28 +1145,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 1,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 8
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 8
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 8 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 8 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#2E86AB",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -1971,29 +1162,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 30,
-            "left": 590,
-            "width": 80,
-            "height": 80
-          },
-          "vCoords": {
-            "top": 30,
-            "left": 286,
-            "width": 80,
-            "height": 80
-          },
+          "hCoords": { "top": 30, "left": 590, "width": 80, "height": 80 },
+          "vCoords": { "top": 30, "left": 286, "width": 80, "height": 80 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 4,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2003,18 +1180,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 520,
-            "height": 40
-          },
-          "vCoords": {
-            "top": 120,
-            "left": 40,
-            "width": 316,
-            "height": 40
-          },
+          "hCoords": { "top": 40, "left": 40, "width": 520, "height": 40 },
+          "vCoords": { "top": 120, "left": 40, "width": 316, "height": 40 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -2027,11 +1194,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -2041,18 +1204,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 90,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 170,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 90, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 170, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2065,11 +1218,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -2079,18 +1228,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 124,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 204,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 124, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 204, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2103,11 +1242,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -2117,18 +1252,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 270,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 550,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 270, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 550, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2141,11 +1266,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -2155,18 +1276,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 302,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 582,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 302, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 582, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2179,11 +1290,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -2193,18 +1300,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 334,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 614,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 334, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 614, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2217,26 +1314,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "right_accent",
       "name": "Right Accent",
       "description": "Thin color accent bar on the right side, content aligned left. Best for design and media agencies.",
-      "bestFor": [
-        "design",
-        "media",
-        "photography",
-        "architecture",
-        "art"
-      ],
+      "bestFor": ["design", "media", "photography", "architecture", "art"],
       "components": [
         {
           "id": "ra-001",
@@ -2245,28 +1333,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#F8F8F8",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -2276,28 +1350,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 1,
-          "hCoords": {
-            "top": 0,
-            "left": 696,
-            "width": 8,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 388,
-            "width": 8,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 696, "width": 8, "height": 396 },
+          "vCoords": { "top": 0, "left": 388, "width": 8, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#F72585",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2307,29 +1367,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 70,
-            "height": 70
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 70,
-            "height": 70
-          },
+          "hCoords": { "top": 40, "left": 40, "width": 70, "height": 70 },
+          "vCoords": { "top": 40, "left": 40, "width": 70, "height": 70 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 8,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2339,18 +1385,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 160,
-            "left": 40,
-            "width": 460,
-            "height": 42
-          },
-          "vCoords": {
-            "top": 280,
-            "left": 40,
-            "width": 316,
-            "height": 42
-          },
+          "hCoords": { "top": 160, "left": 40, "width": 460, "height": 42 },
+          "vCoords": { "top": 280, "left": 40, "width": 316, "height": 42 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -2363,11 +1399,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -2377,18 +1409,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 212,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 332,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 212, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 332, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2401,11 +1423,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -2415,18 +1433,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 246,
-            "left": 40,
-            "width": 400,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 366,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 246, "left": 40, "width": 400, "height": 26 },
+          "vCoords": { "top": 366, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2439,11 +1447,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -2453,18 +1457,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 310,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 560,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 310, "left": 40, "width": 400, "height": 22 },
+          "vCoords": { "top": 560, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2477,50 +1471,8 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
-        },
-        {
-          "id": "ra-phone",
-          "type": "role_content",
-          "cardSide": "front",
-          "componentType": "phoneNumber",
-          "visible": true,
-          "zIndex": 2,
-          "hCoords": {
-            "top": 340,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 590,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
-          "componentStyle": {
-            "fontFamily": "Roboto",
-            "fontWeight": "normal",
-            "fontStyle": "normal",
-            "fontSize": 11,
-            "color": "#555555",
-            "textAlign": "left",
-            "letterSpacing": 0,
-            "textTransform": "none",
-            "textDecoration": "none",
-            "opacity": 1
-          },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
-          "fallbackText": "+1 000 000 0000"
         },
         {
           "id": "ra-008",
@@ -2529,18 +1481,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 370,
-            "left": 40,
-            "width": 400,
-            "height": 22
-          },
-          "vCoords": {
-            "top": 620,
-            "left": 40,
-            "width": 316,
-            "height": 22
-          },
+          "hCoords": { "top": 340, "left": 40, "width": 400, "height": 22 },
+          "vCoords": { "top": 590, "left": 40, "width": 316, "height": 22 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2553,26 +1495,17 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
     },
+
     {
       "templateId": "classic_clean",
       "name": "Classic Clean",
       "description": "Traditional business card layout with subtle border. Best for banking, legal, and formal industries.",
-      "bestFor": [
-        "banking",
-        "legal",
-        "government",
-        "formal",
-        "traditional"
-      ],
+      "bestFor": ["banking", "legal", "government", "formal", "traditional"],
       "components": [
         {
           "id": "cc-001",
@@ -2581,28 +1514,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "screenshot" },
           "fallbackText": ""
         },
         {
@@ -2612,29 +1531,15 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 148,
-            "left": 500,
-            "width": 160,
-            "height": 60
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 40,
-            "width": 160,
-            "height": 60
-          },
+          "hCoords": { "top": 148, "left": 500, "width": 160, "height": 60 },
+          "vCoords": { "top": 40, "left": 40, "width": 160, "height": 60 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
             "borderRadius": 0,
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2644,18 +1549,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 80,
-            "left": 40,
-            "width": 440,
-            "height": 40
-          },
-          "vCoords": {
-            "top": 160,
-            "left": 40,
-            "width": 316,
-            "height": 40
-          },
+          "hCoords": { "top": 80, "left": 40, "width": 440, "height": 40 },
+          "vCoords": { "top": 160, "left": 40, "width": 316, "height": 40 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -2668,11 +1563,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -2682,18 +1573,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 130,
-            "left": 40,
-            "width": 440,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 210,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 130, "left": 40, "width": 440, "height": 26 },
+          "vCoords": { "top": 210, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2706,11 +1587,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -2720,18 +1597,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 164,
-            "left": 40,
-            "width": 440,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 244,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 164, "left": 40, "width": 440, "height": 26 },
+          "vCoords": { "top": 244, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -2744,11 +1611,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -2758,18 +1621,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 270,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 500,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 270, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 500, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2782,11 +1635,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -2796,18 +1645,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 302,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 532,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 302, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 532, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2820,11 +1659,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -2834,18 +1669,8 @@
           "componentType": "organization_address",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 334,
-            "left": 40,
-            "width": 360,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 564,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 334, "left": 40, "width": 360, "height": 24 },
+          "vCoords": { "top": 564, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -2858,27 +1683,17 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "organization_address",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "organization_address", "extractedFrom": "text_input" },
           "fallbackText": "123 Business St, City, State"
         }
       ]
     },
+
     {
       "templateId": "vibrant_block",
       "name": "Vibrant Block",
       "description": "Full solid brand color background with all white content. Best for bold, confident brands.",
-      "bestFor": [
-        "bold",
-        "confident",
-        "retail",
-        "food",
-        "entertainment",
-        "events"
-      ],
+      "bestFor": ["bold", "confident", "retail", "food", "entertainment", "events"],
       "components": [
         {
           "id": "vb-001",
@@ -2887,28 +1702,14 @@
           "componentType": "cardBackground",
           "visible": true,
           "zIndex": 0,
-          "hCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 704,
-            "height": 396
-          },
-          "vCoords": {
-            "top": 0,
-            "left": 0,
-            "width": 396,
-            "height": 704
-          },
+          "hCoords": { "top": 0, "left": 0, "width": 704, "height": 396 },
+          "vCoords": { "top": 0, "left": 0, "width": 396, "height": 704 },
           "componentStyle": {
             "backgroundType": "color",
             "backgroundValue": "#FF6B35",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "cardBackground",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "cardBackground", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2918,18 +1719,8 @@
           "componentType": "logo",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 40,
-            "left": 580,
-            "width": 80,
-            "height": 80
-          },
-          "vCoords": {
-            "top": 40,
-            "left": 276,
-            "width": 80,
-            "height": 80
-          },
+          "hCoords": { "top": 40, "left": 580, "width": 80, "height": 80 },
+          "vCoords": { "top": 40, "left": 276, "width": 80, "height": 80 },
           "componentStyle": {
             "backgroundType": "image",
             "backgroundValue": "",
@@ -2937,11 +1728,7 @@
             "backgroundColor": "#FFFFFF",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "logo",
-            "extractedFrom": "og_image"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "logo", "extractedFrom": "og_image" },
           "fallbackText": ""
         },
         {
@@ -2951,18 +1738,8 @@
           "componentType": "fullName",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 120,
-            "left": 40,
-            "width": 500,
-            "height": 48
-          },
-          "vCoords": {
-            "top": 220,
-            "left": 40,
-            "width": 316,
-            "height": 48
-          },
+          "hCoords": { "top": 120, "left": 40, "width": 500, "height": 48 },
+          "vCoords": { "top": 220, "left": 40, "width": 316, "height": 48 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "bold",
@@ -2975,11 +1752,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "fullName",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "fullName", "extractedFrom": "text_input" },
           "fallbackText": "Your Name"
         },
         {
@@ -2989,18 +1762,8 @@
           "componentType": "position",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 180,
-            "left": 40,
-            "width": 500,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 278,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 180, "left": 40, "width": 500, "height": 26 },
+          "vCoords": { "top": 278, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -3013,11 +1776,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "position",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "position", "extractedFrom": "text_input" },
           "fallbackText": "Your Position"
         },
         {
@@ -3027,18 +1786,8 @@
           "componentType": "organization_name",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 214,
-            "left": 40,
-            "width": 500,
-            "height": 26
-          },
-          "vCoords": {
-            "top": 312,
-            "left": 40,
-            "width": 316,
-            "height": 26
-          },
+          "hCoords": { "top": 214, "left": 40, "width": 500, "height": 26 },
+          "vCoords": { "top": 312, "left": 40, "width": 316, "height": 26 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -3051,11 +1800,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "organization_name",
-            "extractedFrom": "screenshot"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "organization_name", "extractedFrom": "screenshot" },
           "fallbackText": "Company Name"
         },
         {
@@ -3065,18 +1810,8 @@
           "componentType": "email",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 300,
-            "left": 40,
-            "width": 400,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 540,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 300, "left": 40, "width": 400, "height": 24 },
+          "vCoords": { "top": 540, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -3089,11 +1824,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "email",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "email", "extractedFrom": "text_input" },
           "fallbackText": "email@example.com"
         },
         {
@@ -3103,18 +1834,8 @@
           "componentType": "phoneNumber",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 332,
-            "left": 40,
-            "width": 400,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 572,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 332, "left": 40, "width": 400, "height": 24 },
+          "vCoords": { "top": 572, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -3127,11 +1848,7 @@
             "textDecoration": "none",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "user_input",
-            "field": "phoneNumber",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "user_input", "field": "phoneNumber", "extractedFrom": "text_input" },
           "fallbackText": "+1 000 000 0000"
         },
         {
@@ -3141,18 +1858,8 @@
           "componentType": "website",
           "visible": true,
           "zIndex": 2,
-          "hCoords": {
-            "top": 364,
-            "left": 40,
-            "width": 400,
-            "height": 24
-          },
-          "vCoords": {
-            "top": 604,
-            "left": 40,
-            "width": 316,
-            "height": 24
-          },
+          "hCoords": { "top": 364, "left": 40, "width": 400, "height": 24 },
+          "vCoords": { "top": 604, "left": 40, "width": 316, "height": 24 },
           "componentStyle": {
             "fontFamily": "Roboto",
             "fontWeight": "normal",
@@ -3165,11 +1872,7 @@
             "textDecoration": "underline",
             "opacity": 1
           },
-          "valueSource": {
-            "type": "ai_extracted",
-            "field": "website",
-            "extractedFrom": "text_input"
-          },
+          "valueSource": { "type": "ai_extracted", "field": "website", "extractedFrom": "text_input" },
           "fallbackText": "www.example.com"
         }
       ]
