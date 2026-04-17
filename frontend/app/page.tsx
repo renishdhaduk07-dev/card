@@ -72,14 +72,30 @@ export default function Home() {
   );
 
   // ─── Accept handler ─────────────────────────────────────
+  // Accept handler with JSON download
   const handleAccept = useCallback(() => {
     setShowToast(true);
     setToastExiting(false);
+    // Download cardJson as JSON file
+    if (cardJson) {
+      const jsonStr = JSON.stringify(cardJson, null, 2);
+      const blob = new Blob([jsonStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `business_card.json`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 0);
+    }
     setTimeout(() => {
       setToastExiting(true);
       setTimeout(() => setShowToast(false), 300);
     }, 2500);
-  }, []);
+  }, [cardJson]);
 
   // ─── Regenerate ──────────────────────────────────────────
   const handleRegenerate = useCallback(async () => {

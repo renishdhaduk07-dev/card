@@ -91,6 +91,7 @@ def run_agent(url: str, user_data: dict) -> dict:
         "company_name":             None,
         "company_description":      None,
         "logo_url":                 None,
+        "logo_path":                None,
         "primary_color":            None,
         "secondary_color":          None,
         "color_system":             None,

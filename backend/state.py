@@ -16,6 +16,7 @@ class CardState(TypedDict):
     company_name: Optional[str]
     company_description: Optional[str]
     logo_url: Optional[str]
+    logo_path: Optional[str]
     primary_color: Optional[str]
     secondary_color: Optional[str]
     color_system: Optional[dict]

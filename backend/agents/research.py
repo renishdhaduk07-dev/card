@@ -104,17 +104,192 @@ def _get_company_description(page) -> str | None:
     return None
 
 
-def _get_logo_url(page, base_url: str) -> str | None:
+def _get_logo_url(page, context, base_url: str) -> str | None:
+    """
+    Try known logo discovery methods in priority order.
+    Returns immediately on first valid URL to minimize latency.
+    """
+
+    def make_absolute(href: str | None) -> str | None:
+        if not href:
+            return None
+        if href.startswith("http"):
+            return href
+        if href.startswith("//"):
+            return "https:" + href
+        if href.startswith("/"):
+            return base_url + href
+        return base_url + "/" + href
+
+    # Method 1: High-res apple-touch icons
     for selector in [
+        'link[rel="apple-touch-icon"][sizes="180x180"]',
+        'link[rel="apple-touch-icon"][sizes="192x192"]',
         'link[rel="apple-touch-icon"]',
+    ]:
+        try:
+            tag = page.query_selector(selector)
+            if tag:
+                href = tag.get_attribute("href")
+                url = make_absolute(href)
+                if url:
+                    print(f"[Research] Logo via apple-touch-icon: {url}")
+                    return url
+        except Exception:
+            continue
+
+    # Method 2: High-res favicon icons
+    for selector in [
+        'link[rel="icon"][sizes="512x512"]',
+        'link[rel="icon"][sizes="192x192"]',
+        'link[rel="icon"][sizes="128x128"]',
+        'link[rel="icon"][type="image/png"]',
+        'link[rel="icon"][type="image/svg+xml"]',
         'link[rel="shortcut icon"]',
         'link[rel="icon"]',
     ]:
-        tag = page.query_selector(selector)
-        if tag:
-            href = tag.get_attribute("href")
-            if href:
-                return href if href.startswith("http") else f"{base_url}{href}"
+        try:
+            tag = page.query_selector(selector)
+            if tag:
+                href = tag.get_attribute("href")
+                if href and ".ico" in href.lower():
+                    continue
+                url = make_absolute(href)
+                if url:
+                    print(f"[Research] Logo via favicon: {url}")
+                    return url
+        except Exception:
+            continue
+
+    # Method 3: Manifest icons
+    try:
+        manifest_tag = page.query_selector('link[rel="manifest"]')
+        if manifest_tag:
+            manifest_href = manifest_tag.get_attribute("href")
+            manifest_url = make_absolute(manifest_href)
+            if manifest_url:
+                resp = context.request.get(manifest_url, timeout=5000)
+                if resp.ok:
+                    manifest = resp.json()
+                    icons = manifest.get("icons", []) if isinstance(manifest, dict) else []
+                    icons_sorted = sorted(
+                        icons,
+                        key=lambda x: int(x.get("sizes", "0x0").split("x")[0]) if isinstance(x, dict) and x.get("sizes") else 0,
+                        reverse=True,
+                    )
+                    for icon in icons_sorted:
+                        if not isinstance(icon, dict):
+                            continue
+                        src = icon.get("src", "")
+                        size = icon.get("sizes", "0x0")
+                        try:
+                            w = int(size.split("x")[0])
+                            if w < 64:
+                                continue
+                        except Exception:
+                            pass
+
+                        url = make_absolute(src)
+                        if url:
+                            print(f"[Research] Logo via manifest: {url}")
+                            return url
+    except Exception as e:
+        print(f"[Research] Warning: Manifest logo failed: {e}")
+
+    # Method 4: DOM logo-like img tags
+    try:
+        logo_selectors = [
+            'header img[class*="logo"]',
+            'header img[id*="logo"]',
+            'nav img[class*="logo"]',
+            'nav img[id*="logo"]',
+            'img[class*="logo"]',
+            'img[id*="logo"]',
+            'img[alt*="logo" i]',
+            'img[alt*="brand" i]',
+            'a[class*="logo"] img',
+            'a[id*="logo"] img',
+            '.logo img',
+            '#logo img',
+            'header img:first-of-type',
+        ]
+        for selector in logo_selectors:
+            try:
+                tag = page.query_selector(selector)
+                if tag:
+                    src = tag.get_attribute("src")
+                    url = make_absolute(src)
+                    if url and not url.lower().endswith(".ico"):
+                        print(f"[Research] Logo via img tag ({selector}): {url}")
+                        return url
+            except Exception:
+                continue
+    except Exception as e:
+        print(f"[Research] Warning: img logo search failed: {e}")
+
+    # Method 5: SVG logo image tags
+    try:
+        for selector in [
+            'header img[src*=".svg"]',
+            'nav img[src*=".svg"]',
+            'header img[src*="logo"]',
+            'nav img[src*="logo"]',
+        ]:
+            try:
+                tag = page.query_selector(selector)
+                if tag:
+                    src = tag.get_attribute("src")
+                    url = make_absolute(src)
+                    if url:
+                        print(f"[Research] Logo via SVG img: {url}")
+                        return url
+            except Exception:
+                continue
+    except Exception as e:
+        print(f"[Research] Warning: SVG logo search failed: {e}")
+
+    # Method 6: Clearbit by domain
+    try:
+        domain = base_url.replace("https://", "").replace("http://", "").split("/")[0]
+        clearbit_url = f"https://logo.clearbit.com/{domain}"
+        resp = context.request.get(clearbit_url, timeout=5000)
+        if resp.ok:
+            print(f"[Research] Logo via Clearbit: {clearbit_url}")
+            return clearbit_url
+    except Exception as e:
+        print(f"[Research] Warning: Clearbit logo failed: {e}")
+
+    # Method 7: Common direct logo paths
+    try:
+        common_paths = [
+            "/logo.svg",
+            "/logo.png",
+            "/logo.jpg",
+            "/images/logo.svg",
+            "/images/logo.png",
+            "/img/logo.svg",
+            "/img/logo.png",
+            "/assets/logo.svg",
+            "/assets/logo.png",
+            "/static/logo.svg",
+            "/static/logo.png",
+        ]
+        for path in common_paths:
+            url = base_url + path
+            try:
+                resp = context.request.get(url, timeout=3000)
+                if not resp.ok:
+                    continue
+                content_type = str(resp.headers.get("content-type", "")).lower()
+                if "image" in content_type or "svg" in content_type:
+                    print(f"[Research] Logo via direct path: {url}")
+                    return url
+            except Exception:
+                continue
+    except Exception as e:
+        print(f"[Research] Warning: Direct path logo failed: {e}")
+
+    print("[Research] Warning: No logo found via any method")
     return None
 
 
@@ -185,27 +360,27 @@ def _run_playwright(url: str) -> dict:
             company_name = _get_company_name(page)
             company_description = _get_company_description(page)
             base_url = "/".join(url.split("/")[:3])
-            logo_url = _get_logo_url(page, base_url)
+            logo_url = _get_logo_url(page, context, base_url)
 
-            # Priority 1: Extract colors from OG image
-            if og_image_url:
-                try:
-                    _save_og_image(context, og_image_url)
-                    if OG_IMAGE_PATH.exists():
-                        primary_color, secondary_color = _extract_colors(str(OG_IMAGE_PATH))
-                except Exception as e:
-                    print(f"[Research] Warning: OG image error: {e}")
-
-            # Priority 2: Extract colors from logo if OG failed
+            # Priority 1: Extract colors from logo
             if logo_url:
                 try:
                     _save_logo_image(context, logo_url)
-                    if not primary_color and LOGO_IMAGE_PATH.exists():
+                    if LOGO_IMAGE_PATH.exists():
                         primary_color, secondary_color = _extract_colors(str(LOGO_IMAGE_PATH))
                 except Exception as e:
                     print(f"[Research] Warning: Logo fetch error: {e}")
 
-            # Priority 3: Extract from screenshot if both OG and logo failed
+            # Priority 2: Extract colors from OG image if logo failed
+            if og_image_url:
+                try:
+                    _save_og_image(context, og_image_url)
+                    if not primary_color and OG_IMAGE_PATH.exists():
+                        primary_color, secondary_color = _extract_colors(str(OG_IMAGE_PATH))
+                except Exception as e:
+                    print(f"[Research] Warning: OG image error: {e}")
+
+            # Priority 3: Extract from screenshot if both logo and OG failed
             if not primary_color:
                 primary_color, secondary_color = _extract_colors(str(SCREENSHOT_PATH))
 

@@ -108,8 +108,22 @@ function CardComponentView({ component }: { component: CardComponent }) {
     const src = s.backgroundValue;
     if (!src) return null;
 
+    const logoStyle: React.CSSProperties = {
+      ...baseStyle,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      boxSizing: "border-box",
+      overflow: "hidden",
+      backgroundColor: s.backgroundColor,
+      paddingTop: s.padding?.top ?? 0,
+      paddingRight: s.padding?.right ?? 0,
+      paddingBottom: s.padding?.bottom ?? 0,
+      paddingLeft: s.padding?.left ?? 0,
+    };
+
     return (
-      <div style={baseStyle}>
+      <div style={logoStyle}>
         <LogoImage
           src={src}
           style={{
